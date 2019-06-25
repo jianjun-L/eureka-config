@@ -7,13 +7,21 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/xxxx/xx
+          uri: https://github.com/jianjun-L/jun
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8801/eureka/
+      defaultZone: http://172.16.207.252:8801/eureka/
 management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh
+        include: "*"
